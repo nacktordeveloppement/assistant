@@ -9,12 +9,12 @@ bot.on('ready', () => {
 bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find("id", "465323709796843531");
     const regle = member.guild.channels.find("id", "465332207100100609");
-    channel.send(`Bienvenue **${member}**, sur le serveur **${member.guild.name}**! N'hésite pas a allé lire le ${regle} pour ne pas avoir de problèmes! Nous somme maintenant **${member.guild.members.size}**!`);
+    channel.send(`Bienvenue **${member}**, sur le serveur **${member.guild.name}**! N'hésite pas a allé lire le ${regle} pour ne pas avoir de problèmes! Nous somme maintenant **${member.guild.members.size}** membres sur le serveur!`);
 });
 
 bot.on('guildMemberRemove', member => {
     const channel = member.guild.channels.find("id", "465323709796843531");
-    channel.send(`Aurevoir **${member}**, Nous avons perdut un membre nous somme maintenant **${member.guild.members.size}**!`);
+    channel.send(`Aurevoir **${member}**, Nous avons perdut un membre nous somme maintenant **${member.guild.members.size}** membres sur le serveur!`);
 });
 
 bot.login(process.env.TOKEN);
