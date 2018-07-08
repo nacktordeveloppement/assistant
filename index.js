@@ -14,7 +14,9 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('guildMemberRemove', member => {
     const channel = member.guild.channels.find("id", "465323709796843531");
+    const role = member.guild.roles.find('name', "Membre");
     channel.send(`Aurevoir **${member}**, Nous avons perdut un membre nous somme maintenant **${member.guild.members.size}** membres sur le serveur!`);
+    member.addRole(role);
 });
 
 bot.login(process.env.TOKEN);
