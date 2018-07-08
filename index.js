@@ -12,4 +12,4 @@ bot.on('guildMemberAdd', member => {
     channel.send(`Bienvenue **${member}**, sur le serveur **${member.guild.name}**! N'hésite pas a allé lire le ${regle} pour ne pas avoir de problèmes!`);
 });
 
-bot.login("NDY1MzM1MDM2MzAxMDE3MDk4.DiMAiw.DWUypP7i6CZm5DUGy-Qu0Oyi8zE");
+bot.login(process.env.TOKEN);
